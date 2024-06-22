@@ -3,3 +3,5 @@
 /[Tt]emp/
 /[Uu]serSettings/
 /[Oo]utput/
+/runs/
+*.pt
