@@ -1,0 +1,6 @@
+train: C:\Users\adams\OneDrive\Documents\object-generator\experiments\a\train
+val: C:\Users\adams\OneDrive\Documents\object-generator\experiments\a\test
+
+nc: 1
+
+names: ["sheep"]
