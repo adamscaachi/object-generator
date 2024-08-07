@@ -6,3 +6,6 @@
 /runs/
 *.pt
 *.mp4
+*.png
+*.txt
+*.cache
