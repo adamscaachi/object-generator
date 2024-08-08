@@ -15,7 +15,7 @@ Three experiments are conducted to investigate how synthetic data affects the pe
 - b) Training with synthetic data only (80 training images, 20 validation images).
 - c) Training with the combined real and synthetic data used in the previous experiments (87 training images, 22 validation images).
   
-All models are then tested quantitatively on a single testing image, and qualitatively on a video with 326 frames. 
+All models are then evaluated quantitatively on a single testing image, and qualitatively on a video with 326 frames. 
 
 ## Results
 
@@ -29,7 +29,7 @@ The mean average precision (mAP) of each model evaluated at intersection over un
 
 <img src="https://github.com/user-attachments/assets/059217ac-d6e9-4357-ad7f-fc1273edebc8" width="400"/>
 
-All models perform well with the relatively lenient criterion of 50% overlap, but when increasing the strictness of this criterion to 75% only the model trained using the combined dataset retains its mAP. Furthermore, when considering the model's performance over a range of detection strictness, the combined data training strategy also outperforms the rest.
+All models perform well with the relatively lenient criterion of 50% overlap, but when increasing the strictness of this criterion to 75% only the model trained using the combined dataset retains its mAP. Furthermore, when considering the model's performance over a range of detection strictness, the combined data training strategy also outperforms the others.
 
 ## Conclusion
 
