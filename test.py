@@ -6,7 +6,7 @@ def test(experiment_name):
     config_path = f"experiments/{experiment_name}/test.yaml"
     model = YOLO(model_path)
     metrics = model.val(data=config_path)
-    print(metrics.box.map)
+    print(metrics.box.map75)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
