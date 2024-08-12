@@ -1,4 +1,4 @@
-# object-generator
+# Generating Synthetic Data to Train an Object Detection Model
 
 YOLO (You Only Look Once) models excel at detecting objects quickly, making them useful for applications that require object detection in real-time. However, achieving a good performance in a customised domain often relies on the model being fine-tuned to adapt to new objects, contexts, and variations not seen in the pre-training. This involves having access to a dataset with many labelled examples that are representative of the new domain, however such a dataset may not be easy or even possible to acquire. To circumvent this issue, the use of a 3D game engine to generate training data similar (but not identical) to the target domain is explored. 
 
