@@ -1,6 +1,0 @@
-train: C:\Users\adams\OneDrive\Documents\object-generator\Output\train
-val: C:\Users\adams\OneDrive\Documents\object-generator\Output\val
-
-nc: 1
-
-names: ["sheep"]
