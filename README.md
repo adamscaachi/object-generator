@@ -27,7 +27,34 @@ The model trained with only real data has high precision but low recall across a
 
 The mean average precision (mAP) of each model evaluated at intersection over union (IoU) thresholds of 50% and 75% are shown below. In addition, the mAP averaged over a range of IoU thresholds between 50% and 95% is also provided for each model.
 
-<img src="https://github.com/user-attachments/assets/059217ac-d6e9-4357-ad7f-fc1273edebc8" width="400"/>
+<div align="center">
+<table>
+  <tr>
+    <th></th>
+    <th>mAP50</th>
+    <th>mAP75</th>
+    <th>mAP50-95</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>0.941</td>
+    <td>0.779</td>
+    <td>0.682</td>
+  </tr>
+  <tr>
+    <td>b</td>
+    <td>0.995</td>
+    <td>0.760</td>
+    <td>0.695</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>0.995</td>
+    <td>0.995</td>
+    <td>0.811</td>
+  </tr>
+</table>
+</div>
 
 All models perform well with the relatively lenient criterion of 50% overlap, but when increasing the strictness of this criterion to 75% only the model trained using the combined dataset retains its mAP. Furthermore, when considering the model's performance over a range of detection strictness, the combined data training strategy also outperforms the others.
 
