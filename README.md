@@ -25,7 +25,7 @@ The precision, recall, and F1 score evaluated using the testing image are plotte
 
 The model trained with only real data has high precision but low recall across a range of confidence thresholds, showing that while it rarely misclassifies objects it does struggle to detect all of them. Conversely, the model trained with only synthetic data has high recall but low precision across the range of confidence thresholds, showing that while it succeeds at detecting a large proportion of the objects present it also makes additional erroneous detections. Both of these models have a range of confidence thresholds where the F1 score is reasonably good, however this range is quite small and deploying these models at such fine-tuned values is unlikely to generalise well to unseen data. The model trained with the real and synthetic data combined has both high precision and recall across the range of confidence thresholds, leading to a more robust F1 score that is less sensitive to confidence threshold adjustments.
 
-The mean average precision (mAP) of each model evaluated at multiple intersection over union (IoU) thresholds between 50% and 95% are shown below, where it can be seen that the model trained with real and synthetic data combined localises the objects more accurately.
+The mean average precision (mAP) of each model evaluated at multiple intersection over union (IoU) thresholds between 50% and 95% is shown below, where it can be seen that the model trained with real and synthetic data combined localises the objects more accurately.
 
 <table>
   <tr>
