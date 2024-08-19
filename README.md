@@ -25,38 +25,26 @@ The precision, recall, and F1 score evaluated using the testing image are plotte
 
 The model trained with only real data has high precision but low recall across a range of confidence thresholds, showing that while it rarely misclassifies objects it does struggle to detect all of them. Conversely, the model trained with only synthetic data has high recall but low precision across the range of confidence thresholds, showing that while it succeeds at detecting a large proportion of the objects present it also makes additional erroneous detections. Both of these models have a range of confidence thresholds where the F1 score is reasonably good, however this range is quite small and deploying these models at such fine-tuned values is unlikely to generalise well to unseen data. The model trained with the real and synthetic data combined has both high precision and recall across the range of confidence thresholds, leading to a more robust F1 score that is less sensitive to confidence threshold adjustments.
 
-The mean average precision (mAP) of each model evaluated at intersection over union (IoU) thresholds of 50% and 75% are shown below. In addition, the mAP averaged over a range of IoU thresholds between 50% and 95% is also provided for each model.
+The mean average precision (mAP) of each model evaluated at multiple intersection over union (IoU) thresholds between 50% and 95% are shown below, where it can be seen that the model trained with real and synthetic data combined localises the objects more accurately.
 
-<div align="center">
 <table>
   <tr>
     <th></th>
-    <th>mAP50</th>
-    <th>mAP75</th>
-    <th>mAP50-95</th>
+    <th>mAP</th>
   </tr>
   <tr>
     <td>a</td>
-    <td>0.941</td>
-    <td>0.779</td>
     <td>0.682</td>
   </tr>
   <tr>
     <td>b</td>
-    <td>0.995</td>
-    <td>0.760</td>
     <td>0.695</td>
   </tr>
   <tr>
     <td>c</td>
-    <td>0.995</td>
-    <td>0.995</td>
     <td>0.811</td>
   </tr>
 </table>
-</div>
-
-All models perform well with the relatively lenient criterion of 50% overlap, but when increasing the strictness of this criterion to 75% only the model trained using the combined dataset retains its mAP. Furthermore, when considering the model's performance over a range of detection strictness, the combined data training strategy also outperforms the others.
 
 ## Conclusion
 
