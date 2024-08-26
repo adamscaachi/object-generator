@@ -15,40 +15,13 @@ Three experiments are conducted to investigate how synthetic data affects the pe
 - b) Training with synthetic data only (80 training images, 20 validation images).
 - c) Training with the combined real and synthetic data used in the previous experiments (87 training images, 22 validation images).
   
-All models are then evaluated quantitatively on a single testing image, and qualitatively on a video with 326 frames. 
-
-## Results
-
-The precision, recall, and F1 score evaluated using the testing image are plotted below for each of the model training strategies.
+All models are then evaluated quantitatively on a single testing image, and qualitatively on a video with 326 frames. The precision, recall, and F1 score evaluated using the testing image are plotted below for each of the model training strategies.
 
 ![metrics](https://github.com/user-attachments/assets/0f45c141-6b36-4142-a2d6-ac315a43ee0a)
 
-The model trained with only real data has high precision but low recall across a range of confidence thresholds, showing that while it rarely misclassifies objects it does struggle to detect all of them. Conversely, the model trained with only synthetic data has high recall but low precision across the range of confidence thresholds, showing that while it succeeds at detecting a large proportion of the objects present it also makes additional erroneous detections. Both of these models have a range of confidence thresholds where the F1 score is reasonably good, however this range is quite small and deploying these models at such fine-tuned values is unlikely to generalise well to unseen data. The model trained with the real and synthetic data combined has both high precision and recall across the range of confidence thresholds, leading to a more robust F1 score that is less sensitive to confidence threshold adjustments.
+The model trained with the real and synthetic data combined has both high precision and recall across the range of confidence thresholds, leading to a more robust F1 score that is less sensitive to confidence threshold adjustments.
 
-The mean average precision (mAP) of each model evaluated at multiple intersection over union (IoU) thresholds between 50% and 95% is shown below, where it can be seen that the model trained with real and synthetic data combined localises the objects more accurately.
-
-<table>
-  <tr>
-    <th></th>
-    <th>mAP</th>
-  </tr>
-  <tr>
-    <td>a</td>
-    <td>0.682</td>
-  </tr>
-  <tr>
-    <td>b</td>
-    <td>0.695</td>
-  </tr>
-  <tr>
-    <td>c</td>
-    <td>0.811</td>
-  </tr>
-</table>
-
-## Conclusion
-
-A 3D game engine was used to generate synthetic data for training an object detection model. Using a combination of real and synthetic data resulted in a model with a more robust F1 score and a higher mAP compared to models trained using only real or only synthetic data. This was achieved despite the visible domain gap between the synthetic images and real images. With this approach, a reliable model was produced using only 10 manually labelled images. 
+## Demonstration
 
 A demonstration of object detection using the model trained on the combined real and synthetic data is shown below.
 
